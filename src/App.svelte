@@ -16,7 +16,7 @@
 	}
 
 	const handleEnter = (e) => {
-		if (e.key === 'Enter') {
+		if (e.key === 'Enter' && message) {
 			socket.send(message);
 			message = '';
 		}
