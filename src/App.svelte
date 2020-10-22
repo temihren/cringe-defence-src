@@ -5,7 +5,7 @@
 	let message = '';
 	let allMessages = [];
 
-	let socket = new WebSocket("ws://localhost:8080/messages");
+	let socket = new WebSocket(`ws://${window.location.hostname}:8080/messages`);
 	socket.onmessage = (e) => {allMessages = JSON.parse(e.data)}
 
 	const sendMessage = () => {
